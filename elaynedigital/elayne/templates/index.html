@@ -726,6 +726,229 @@
     </div>
     </div>   
 
+    <section class="testimonials" id="testimonials">
+
+      <div class="container">
+         <h2 class="page-headings aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">Testimonials</h2>
+         
+  
+            <div class="testimonials-item">
+  
+              <span>
+  
+              <img src="{% static 'image/icons8-contact-96.png' %}">
+  
+              </span>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+              <div class="carousel-item active">
+                <p>
+    
+                  The digital world is changing and Elayne took our digital presences to a whole new level. They act
+  
+                  immediately, give Quick response and timely service. Very satisfied with their service.
+  
+                </p>
+  
+                <h6><strong>
+  
+                    Alpha design studio
+  
+                  </strong>
+  
+                </h6>
+              </div>
+              {% for i in test_model %}
+            <div class="carousel-item">
+             <p>{{i.paragraph}}</p>
+             <h6><strong>
+            {{i.name}}
+            </strong>
+          </h6>
+            </div>
+            {% endfor %}
+            
+            </div>
+            </div>
+  
+  
+          </div>
+       
+    </div>
+  </section> 
+
+  <section id="contactus" class="contactus-page contact-bg">
+
+    <div class="container">
+
+      <h2 class="page-headings aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">Contact Us</h2>
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-4 col-md-8 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+
+          <div class="address-wrap">
+
+            <div class="row">
+
+              <div class="col-lg-3 col-md-2 col-sm-2 col-3"><i class="fas fa-thumbtack"><img src="{% static 'image/icons8-pin-48.png' %}"></i></div>
+
+              <div class="col-lg-9 col-md-10 col-sm-10 col-9">
+
+                <h6>Address</h6>
+
+                <p>Address- ARA 97B,<br>
+
+                  Vazhakkala, Kochi-21</p>
+
+              </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+              <div class="col-lg-3 col-md-2 col-sm-2 col-3"><i class="fas fa-phone"><img src="{% static 'image/icons8-phone-48.png' %}"></i></div>
+
+              <div class="col-lg-9 col-md-10 col-sm-10 col-9">
+
+                <h6>Phone</h6>
+
+                <p><a href="tel:+917012707281">+91 70127 07281</a></p>
+
+              </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+              <div class="col-lg-3 col-md-2 col-sm-2 col-3"><i class="far fa-envelope-open"><img src="{% static 'image/icons8-open-envelope-48.png' %}"></i></div>
+
+              <div class="col-lg-9 col-md-10 col-sm-10 col-9">
+
+                <h6>Email</h6>
+
+                <p><a href="mailto:info@elaynedigital.com">info@elaynedigital.com</a></p>
+
+              </div>
+
+            </div>
+
+
+
+            <a href="" target="_blank" class="download-brochure">Download Brochure</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="col-lg-8 aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+
+          <h4>SEND US A MESSAGE</h4>
+
+          <p>Have questions? Don’t hesitate to contact us for any information.</p>
+
+          <form id="form_id" method="POST" action="{% url 'index' %}"> {% csrf_token %}
+
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="03AFcWeA6bEFkTSWafwq8wDAAcQFGdZDk9FhPDqUJQGHmmjZk-O16n6E68bOsKOsR5-o8Twwy3sUgquyvdavgCWld45s8GyROpm3RT_fFXXvZVMlJoC3ryke3OL6HRgFYUBrbowaJw0j-ke8XfOwAikldaFA1YL6dMcK0JxHxD5DnczlGuIKvEmTCwSnqgAM_lGcc8N5N2Rpd1Qu3U6qVwDDBxTBZ2bFklY7l0f8ghA8EWSVx4B0VaOlOMK_FgSiAEZqZQMko4VP-fy5X_AJ587yxkueUcTNxBqL5SkFnmHC0y_8TuJnfC03qrPSPyEjrgGwZnOKUrg09eao8MpjQ43b-3WrdC_112wFqylgEHSkiTWOcfahTCUqUw2yXRy6AhAnxeeq6awq4ZB1QkoEJlsnqC77ZKNaNbzdDNcCQ8hFmtbJDn2M2i-p53TyTk5-rmXxhrM3v4Mo5Ww07WyvrZhZY8HrkbR1z0Fm1n1a2wzkWUNh3UX63jUXdQRdmQcyTlzscZUAFUn_hN1g0ySi1skcOSWhWASIfbiUlP6ZxBRjFVo_Ed36fiSJym2y7yd-6y1RvGTyhRUdrmeh5Ew21Z7XTA-bWeREFXDwcbSAsoPlgTasaiavbGbpkQMy8C7yaxzSXaMUSwCipFkSt616W-ou9mqNMHdcNZaw">
+
+            <input type="hidden" name="action" value="validate_captcha">
+
+            <div class="row justify-content-center">
+
+              <div class="col-lg-6 col-md-6"><input type="text" name="contact_name" class="form-control" placeholder="Your Name" required="">
+
+              </div>
+
+              <div class="col-lg-6 col-md-6"><input type="email" name="contact_email" class="form-control" placeholder="Email" required="">
+
+              </div>
+
+              <div class="col-lg-6 col-md-6"><input type="text" name="contact_phone" class="form-control" placeholder="Phone" required="">
+
+              </div>
+
+              <div class="col-lg-6 col-md-6"><input type="text" name="contact_subject" class="form-control" placeholder="Subject" required="">
+
+              </div>
+
+              <div class="col-lg-12"><textarea name="contact_message" id="" cols="30" class="form-control" rows="10" placeholder="Message" required=""></textarea></div>
+
+              <div class="col-lg-4 col-md-4" name="save"><button>Submit</button></div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+
+
+        <div class="col-lg-12 aos-init" data-aos="fade-up" data-aos-delay="50">
+
+          <div class="google-maps">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.1894981137507!2d76.30352957387407!3d10.001200456640062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d0bd455b717%3A0x2cd791ee463cf642!2sPalarivattom%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1666416437586!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="sucessModal" class="modal fade" role="dialog">
+
+      <div class="modal-dialog">
+
+
+
+        <div class="modal-content popup-modals">
+
+          <img src="{% static 'image/sucess.gif' %}" alt="Sucess">
+
+          <h2>Thank you for your Enquiry</h2>
+
+          <h4>We will be in touch soon</h4>
+
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div class="footer-credentials">
+
+      <div class="container">
+
+        <p>© 2022 www.elaynedigital.com. All rights reserved</p>
+
+      </div>
+
+    </div>
+
+  </section>
+  
      
 
 
@@ -736,7 +959,14 @@
 
 
 
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var testimonialItems = document.querySelectorAll('.testimonials-item');
+          testimonialItems.forEach(function (item) {
+              item.classList.add('show');
+          });
+      });
+  </script>
 
         <script>
           function nextCarouselItem() {
