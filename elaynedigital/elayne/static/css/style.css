@@ -2207,15 +2207,7 @@ element.style {
     padding-bottom: 43px;
     padding-top: 45px;
 }
-/* .slick-initialized .slick-slide {
-    display: block;
-}
-.slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-} */
+
  .testimonials-item {
     border: 1.5px solid purple;
     margin-top: 10px;
@@ -2264,6 +2256,46 @@ element.style {
 
 
 
+
+/* our clients */
+.our-clients-wrapper{
+    width: 100%;
+    background: #f6f1fd;
+    padding: 70px 0px;
+    margin: 0px 0px 90px 0px;
+    display: block;
+}
+.slider {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2.5rem;
+  }
+  .item {
+    animation: animate 25s linear infinite;
+  }
+  .item img
+    {
+      min-width: 200px;
+      padding: 0 30px;
+      width: 100px;
+      height: 100px;
+    }
+  .slider:hover .item {
+    animation-play-state: paused;
+  }
+  @keyframes animate {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1800px, 0, 0);
+    }
+  }
+
+
+
 /* contact us */
 .contactus-page {
     width: 100%;
@@ -2274,11 +2306,7 @@ section{
     padding: 0 0;
     top: 0;
 }
-.contact-bg{
-    background-image: url('contact-bg.svg');
-    background-size: auto;
-    background-repeat: no-repeat;
-}
+
 article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
     display: block
 }
